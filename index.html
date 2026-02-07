@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Malpractice Severity and Case Volume</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    h1, h2 {
+      line-height: 1.3;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .viz {
+      margin: 30px 0 50px;
+      border: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 550px;
+      border: none;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Are malpractice payments more severe in some states because there are more cases — or because the cases are more serious?</h1>
+
+<p>
+Medical malpractice payments vary widely across U.S. states. Some states report far more malpractice cases than others, and some appear to have a higher share of cases involving death or permanent injury. At first glance, geography seems to explain severity — but volume and seriousness may be telling different stories.
+</p>
+
+<p>
+This data brief examines whether states with higher malpractice severity simply have more cases overall, or whether their cases are systematically more severe. Using national malpractice payment data, I separate case volume from severity to understand what drives observed differences.
+</p>
+
+---
+
+<h2>Where malpractice severity appears highest</h2>
+
+<iframe class="viz" src="map.html"></iframe>
+<div class="caption">
+Map showing the share of malpractice payment reports involving severe harm by state.
+</div>
+
+<p>
+The map suggests clear geographic clustering. However, severity alone does not account for how many cases each state reports. States with fewer total cases may appear more severe simply because of a heavier tail of extreme outcomes.
+</p>
+
+---
+
+<h2>States at the top and bottom of severity rankings</h2>
+
+<iframe class="viz" src="top10_bar.html"></iframe>
+<div class="caption">
+Top 10 states by share of malpractice cases involving severe harm.
+</div>
+
+<iframe class="viz" src="bottom10_bar.html"></iframe>
+<div class="caption">
+Bottom 10 states by share of malpractice cases involving severe harm.
+</div>
+
+<p>
+These rankings highlight stark contrasts, but they obscure differences in total malpractice volume. High severity does not necessarily imply high malpractice activity.
+</p>
+
+---
+
+<h2>Volume and severity are not the same thing</h2>
+
+<iframe class="viz" src="mirror_stacked.html"></iframe>
+<div class="caption">
+Mirror stacked bars showing total malpractice cases split into severe and non-severe outcomes.
+</div>
+
+<p>
+The mirror chart reveals that states with the highest malpractice volume do not consistently have the highest severity shares. Large states often report many non-severe cases alongside severe ones, while smaller states may show high severity proportions driven by fewer total reports.
+</p>
+
+---
+
+<h2>Is severity associated with volume?</h2>
+
+<iframe class="viz" src="scatterplot.html"></iframe>
+<div class="caption">
+Scatterplot of total malpractice cases versus severity share, with linear trend.
+</div>
+
+<p>
+A simple regression confirms that the relationship between malpractice volume and severity is weak and statistically insignificant. While the trend appears slightly positive, volume explains little of the variation in severity across states.
+</p>
+
+---
+
+<h2>Conclusion</h2>
+
+<p>
+Geographic patterns in malpractice severity are real, but they are not primarily driven by the number of malpractice cases alone. Severity reflects case composition more than volume. Interpreting high-severity states without considering total cases risks misleading conclusions about malpractice risk and health system performance.
+</p>
+
+</body>
+</html>
 
