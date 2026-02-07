@@ -211,16 +211,23 @@
   </div>
 
   <p>
-    To directly test the relationship between volume and severity, this scatterplot compares
-    total malpractice cases with the share involving severe harm for each state.
-    While the fitted trend line slopes slightly upward, the relationship is weak and
-    statistically insignificant.
-  </p>
+  To directly test the relationship between volume and severity, this scatterplot compares
+  total malpractice cases with the share involving severe harm for each state.
+  While the fitted trend line slopes slightly upward, the relationship is weak.
+</p>
 
-  <p>
-    In other words, states with more malpractice cases are not systematically more severe.
-    Severity appears to be driven by factors beyond sheer case volume.
-  </p>
+<p>
+  Regression results confirm this visual pattern. The correlation between malpractice
+  case volume and severity is small and statistically insignificant
+  (Pearson r = 0.13, p = 0.35), indicating no meaningful association between how many
+  cases a state reports and how severe those cases are.
+</p>
+
+<p>
+  In other words, states with more malpractice cases are not systematically more severe.
+  Severity appears to be driven by factors beyond sheer case volume.
+</p>
+
 
   <hr>
 
@@ -230,19 +237,67 @@
 
   <h2>Conclusion</h2>
 
-  <p>
-    Taken together, these visualizations show that malpractice severity and malpractice
-    volume capture different dimensions of risk. Geographic patterns, distributional
-    extremes, and state-level comparisons all point to the same conclusion:
-    more cases do not necessarily mean worse outcomes.
-  </p>
+<p>
+  Taken together, these visualizations show that malpractice severity and malpractice
+  volume capture different dimensions of risk. Geographic patterns, distributional
+  extremes, and state-level comparisons all point to the same conclusion:
+  a higher number of cases does not necessarily imply more severe patient outcomes.
+</p>
 
-  <p>
-    For policymakers and healthcare practitioners, this distinction matters.
-    Efforts focused solely on reducing malpractice volume may overlook states where
-    patient harm is disproportionately severe. Future research could explore institutional,
-    legal, or clinical factors that better explain why severity varies across states.
-  </p>
+<p>
+  At the same time, this analysis is subject to important limitations. The data are
+  aggregated at the state level and do not distinguish between medical specialties,
+  clinical settings, or types of procedures. As a result, observed differences in
+  severity may reflect variation in case mix rather than differences in underlying
+  quality of care or institutional risk.
+</p>
+
+<p>
+  The regression analysis further highlights these constraints. With only total case
+  volume included as an explanatory variable, the estimated relationship between volume
+  and severity is weak and statistically insignificant. This specification leaves
+  substantial omitted variable bias on the table, as severity is likely influenced by
+  factors such as patient demographics, hospital characteristics, legal environments,
+  reporting practices, and specialty-specific risk profiles that are not captured here.
+</p>
+
+<p>
+  For policymakers and healthcare practitioners, these findings suggest caution.
+  Policies focused solely on reducing malpractice volume may overlook contexts where
+  patient harm is disproportionately severe. Future research would benefit from more
+  granular data that links malpractice outcomes to clinical fields, institutional
+  characteristics, and legal or regulatory environments to better explain why severity
+  varies across states.
+</p>
+<h2>Data Sources and Citations</h2>
+
+<p>
+  The primary data used in this analysis come from the National Practitioner Data Bank
+  (NPDB), which records medical malpractice payment reports submitted by insurers,
+  healthcare institutions, and practitioners across the United States. Severity is
+  defined based on reported patient outcomes, including death or permanent injury,
+  as classified by the NPDB.
+</p>
+
+<p>
+  All analyses and visualizations were produced by the author using publicly available
+  NPDB data aggregated at the state level. Statistical analysis, including correlation
+  estimates and ordinary least squares regression, was conducted in Python.
+</p>
+
+<p>
+  Photo credit: Morsa Images / Getty Images.
+</p>
+
+<p>
+  <strong>References</strong><br>
+  National Practitioner Data Bank. <em>Public Use Data File</em>. U.S. Department of
+  Health and Human Services.  
+  <br>
+  Wooldridge, Jeffrey M. (2016). <em>Introductory Econometrics: A Modern Approach</em>.
+  Cengage Learning.
+</p>
+
 
 </body>
 </html>
